@@ -60,7 +60,6 @@ print("Problem 5")
 let label = "TBC Academy"
 var j = label.count - 1
 
-
 while j >= 0 {
     var index = label.index(label.startIndex, offsetBy: j)
     print(label[index], terminator: "")
@@ -129,9 +128,15 @@ print("Problem 9")
 var month = "March"
 
 switch month {
-case "March" :
+case "March", "April", "May" :
     print("Spring")
-default : ("May be it's not a spring")
+case "June", "July", "August" :
+    print("Summer")
+case "September", "Octomber", "November" :
+    print("Autumn")
+case "December", "January", "Fabruary" :
+    print("Spring")
+default : ("Such a month does not exist")
 }
 
 print("")
@@ -148,7 +153,7 @@ while(y < traficLight.count){
     case "red" : print("🔴", terminator: "->")
     case "yelow" : print("🌕", terminator: "->")
     case "green" : print("🟢", terminator: "->")
-    default : (false)
+    default : print("Invalid trafic light")
     }
     y += 1
     if y == traficLight.count {
